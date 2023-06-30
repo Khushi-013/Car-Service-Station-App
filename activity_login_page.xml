@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loginPageVM" type="com.car.app.modules.loginpage.data.viewmodel.LoginPageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearLoginPage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+
+        <ImageView
+            android:id="@+id/imageImageTwo"
+            imageRes="@{@drawable/img_image2}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_194pxv"
+            android:foreground="@drawable/img_image2"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_image2" />
+
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnlogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylered_50cornerRadius">
+            <FrameLayout android:id="@+id/frameStacklogin"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_79pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_42pxv" android:layout_width="@dimen/_213pxh">
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    style="@style/txtLeckerliOneregular40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginStart="@dimen/_53pxh"
+                    android:layout_marginEnd="@dimen/_53pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Login"
+                    tools:text="@string/lbl_login" />
+
+                <TextView
+                    android:id="@+id/txtSignintoyour"
+                    style="@style/txtLeckerliOneregular20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:ellipsize="end"
+                    android:gravity="top|start"
+                    android:singleLine="true"
+                    android:text="Sign in to your account"
+                    tools:text="@string/msg_sign_in_to_your" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtEamilId"
+                style="@style/txtLeckerliOneregular20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_74pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Email Id"
+                tools:text="@string/lbl_eamil_id" />
+            <EditText android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtEmail"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_13pxv"
+                android:singleLine="true"
+                android:text="@{loginPageVM.loginPageModel.txtEmail}"
+                style="@style/txtRoundedOutline" tools:text="@string/lbl_abc_gmail_com"/>
+
+            <TextView
+                android:id="@+id/txtPassword"
+                style="@style/txtLeckerliOneregular20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Password"
+                tools:text="@string/lbl_password" />
+            <EditText android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPasswordOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@{loginPageVM.loginPageModel.txtPasswordOne}"
+                style="@style/txtRoundedOutline" tools:text="@string/lbl"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoginOne"
+                style="@style/btnSolidRounded"
+                android:layout_width="@dimen/_232pxh"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_59pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_9pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_login2"
+                android:textAllCaps="false"
+                tools:text="@string/lbl_login2" />
+            <LinearLayout android:id="@+id/linearRowconfirmation"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_36pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtConfirmation"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="0.76"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{loginPageVM.loginPageModel.txtConfirmation}"
+                    style="@style/txtJomolhariregular20" tools:text="@string/msg_don_t_have_an_a"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignUp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_27pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.24"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{loginPageVM.loginPageModel.txtSignUp}"
+                    style="@style/txtJomolhariregular20" tools:text="@string/lbl_signup"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
