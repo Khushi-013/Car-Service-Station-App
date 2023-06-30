@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homePageVM" type="com.car.app.modules.homepage.data.viewmodel.HomePageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearHomePage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+
+        <LinearLayout
+            android:id="@+id/linearColumnautomobilecar"
+            style="@style/groupStylered_50cornerRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageImageOne"
+                    imageRes="@{@drawable/img_image1}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_382pxv"
+                    android:foreground="@drawable/img_image1"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_image1" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtAutomobileCar"
+                style="@style/txtJomolhariregular24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_83pxh"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:layout_marginEnd="@dimen/_83pxh"
+                android:text="Automobile Car Service Station"
+                tools:text="@string/msg_automobile_car" />
+
+            <TextView
+                android:id="@+id/txtLanguage"
+                style="@style/txtJomolhariregular16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:gravity="center_horizontal"
+                android:text="We are the leading provider of car service station to multi automobile manufacturers."
+                tools:text="@string/msg_we_are_the_lead" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                style="@style/btnSolidRounded"
+                android:layout_width="@dimen/_232pxh"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_80pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_9pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_login2"
+                android:textAllCaps="false"
+                tools:text="@string/lbl_login2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                style="@style/btnSolidRounded"
+                android:layout_width="@dimen/_232pxh"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_9pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_register"
+                android:textAllCaps="false"
+                tools:text="@string/lbl_register" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
